@@ -1,0 +1,60 @@
+.hero {
+    &-section {
+        position: relative;
+        background: $secondary; //min-height: 100vh;
+    }
+}
+
+.banner {
+    padding-top: 70px;
+    background: url(../images/header-overlay.png) 0 0 no-repeat;
+    background-size: contain, cover;
+    position: relative;
+    z-index: 1;
+    &__content {
+        color: $white; // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // width: 90%;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+    &__title {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    &__text {
+        color: $gray-900;
+        font-weight: 300;
+    }
+    &__link {
+        margin: 0.5rem 1rem 0 0;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        padding: 1rem 2rem;
+    }
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 0;
+    height: 98%;
+}
+
+@include media-breakpoint-up(lg) {
+    .banner {
+        &__content {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        &__title {
+            font-size: 2.75rem;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+// cdn fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+// Variable overrides
+@import "custom-variables";
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
+//site layouts
+@import "layouts/header";
+@import "layouts/hero-banner";
+@import "layouts/partners";
+@import "layouts/what-is-crypto";
+@import "layouts/why-crypto";
+@import "layouts/token";
+@import "layouts/timeline";
+@import "layouts/team";
+@import "layouts/faq";
+@import "layouts/contact";
+@import "layouts/footer";
+//site plugins
+@import "plugins/owl.carousel";
+* {
+    outline: none !important;
+}
+
+body {
+    font: 400/1.7 1rem $font-primary, sans-serif;
+}
+
+p {
+    font-weight: 300;
+}
+
+.wrapper {
+    overflow-x: hidden;
+}
+
+.btn {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    &-round {
+        border-radius: 100px;
+    }
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__title {
+        font-size: 2.2rem;
+        color: $primary;
+        position: relative;
+        z-index: 9;
+        margin-bottom: 2.5rem;
+    }
+    &__sub-heading {
+        font-size: 1.875rem;
+        padding-bottom: 2rem;
+    }
+    &__small-title {
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $secondary;
+        position: relative;
+        z-index: 9;
+    }
+    &__text {
+        color: $gray-700;
+        font-weight: 300;
+    }
+    &--primary {
+        background: $primary;
+    }
+    &--secondary {
+        background: $secondary;
+        * {
+            color: $white;
+        }
+    }
+}
+
+%common-line {
+    position: absolute;
+    left: 50%;
+    height: 1px;
+    width: 110px;
+    content: "";
+    transform: rotate(-45deg);
+    z-index: 1;
+    opacity: .3;
+}
+
+.title-decorator {
+    &::before {
+        @extend %common-line;
+        top: 60px;
+        margin-left: -80px;
+        background: $secondary;
+    }
+    &::after {
+        @extend %common-line;
+        top: 5px;
+        margin-left: -50px;
+        background: $primary;
+    }
+    &--light {
+        &::before {
+            opacity: .5;
+            background: $white;
+        }
+    }
+}
+
+.color-white {
+    color: $white !important;
+}
+
+@include media-breakpoint-up(md) {
+    .section {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}

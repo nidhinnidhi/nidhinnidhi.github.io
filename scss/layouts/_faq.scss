@@ -1,0 +1,110 @@
+.faq {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-repeat: no-repeat;
+        background-size: 600px;
+        background-position: bottom left;
+        background-image: url(../images/faq-pattern.png);
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.tab {
+    &__wrap {}
+    &__list {
+        background: none;
+        border-bottom: 1px solid transparent;
+        display: block;
+        width: 100%;
+        text-align: center;
+        &-item {
+            display: inline-block;
+            float: none;
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        text-align: center;
+        border-radius: 0px;
+        padding: 10px 8px;
+        margin: 0;
+        line-height: 24px;
+        font-weight: 400;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        border: none !important;
+        border-bottom: 1px solid transparent !important;
+        margin-bottom: -1px;
+        color: $gray-700;
+        &:hover {
+            border-bottom-color: transparent;
+            color: $primary;
+        }
+        img {
+            height: 60px;
+            width: auto;
+            margin-top: -5px;
+        }
+        &.active {
+            border-bottom-color: $primary!important;
+            color: $primary;
+            background: transparent;
+            &:hover,
+            &:focus,
+            &:hover,
+            &:focus {
+                border-bottom-color: $primary!important;
+                background: transparent;
+            }
+        }
+    }
+    &__content {
+        background: none;
+        padding: 1.875rem 0 0;
+        margin: 1.875rem 0 0;
+    }
+}
+
+.faq-single {
+    margin-bottom: 2rem;
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+    &__text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: $gray-700;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .tab {
+        &__wrap {}
+        &__list {
+            background: none;
+            border-bottom: 1px solid transparent;
+            display: block;
+            width: 100%;
+            text-align: center;
+            &-item {
+                display: inline-block;
+                float: none;
+                margin-bottom: 0;
+            }
+        }
+        &__link {
+            padding: 10px 8px;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+    }
+}

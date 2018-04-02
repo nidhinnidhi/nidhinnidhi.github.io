@@ -1,0 +1,144 @@
+.site-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-top: 1px solid rgba(22, 164, 253, 0.15);
+    background: $secondary url(../images/footer-pattern.png) no-repeat 50% 0/contain !important;
+    &__logo {
+        margin-bottom: 1.4rem;
+    }
+}
+
+.social {
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        &-item {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 0;
+            list-style: none;
+        }
+        &-link {
+            color: $secondary;
+            background: #fff;
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 30px;
+        }
+    }
+}
+
+.subscription {
+    position: relative;
+    margin-right: 6rem;
+    &__title {
+        font-weight: 300;
+        color: $white;
+    }
+    &__form {
+        position: relative;
+    }
+    &__input {
+        color: $secondary;
+        background: $white;
+        border: 1px solid $white;
+        border-radius: 5px;
+        line-height: 52px;
+        width: 100%;
+        padding-left: 15px;
+        outline: none;
+        transition: all 0.5s ease;
+        font-weight: 300;
+        &.error {
+            border-color: $danger;
+        }
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: $secondary;
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: $secondary;
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: $secondary;
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: $secondary;
+        }
+    }
+    &__btn {
+        position: absolute;
+        top: 5px;
+        right: -50px;
+        padding: 0 10px;
+        min-width: 110px;
+        background: $primary;
+        color: $white;
+        border-radius: 23px;
+        line-height: 44px;
+        &:before {
+            border-radius: 23px;
+        }
+    }
+    label.error {
+        display: none !important;
+    }
+}
+
+.footer-nav {
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &-item {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        &-link {
+            font-size: 0.75rem;
+            font-weight: 300;
+            color: $white;
+            text-decoration: none !important;
+            &--spaced {
+                padding: 0 1rem;
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.copy-info {
+    color: $white;
+    font-weight: 300;
+    font-size: 0.875rem;
+    small {
+        display: block;
+        font-weight: 300;
+        color: rgba($white, 0.6);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-subscription {
+        margin-left: 0;
+        margin-right: 0;
+        .btn.btn-plane {
+            top: 0;
+            right: auto;
+            margin-top: 20px;
+            position: relative;
+        }
+    }
+}

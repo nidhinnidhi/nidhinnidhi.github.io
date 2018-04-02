@@ -1,0 +1,53 @@
+.navbar-toggler {
+    border: 1px solid $white;
+}
+
+.fa-bars {
+    &::before {
+        font-size: 1.9rem;
+        color: $white;
+    }
+}
+
+.site-navbar {
+    background: darken($secondary, 5%);
+    transition: all ease-out 0.3s;
+}
+
+.site-menu {
+    color: $white;
+    &__item {
+        font-size: 0.875rem;
+    }
+    &__link {
+        font-size: 0.875rem;
+        color: $white;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+            color: $primary;
+        }
+    }
+    &__btn {
+        font-size: 0.875rem;
+        color: $white;
+        text-transform: uppercase;
+        border: 1px solid $white;
+        margin: 0.5rem 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .site-navbar {
+        background: none;
+        &.sticky-header {
+            background: darken($secondary, 5%);
+            box-shadow: 0 0 10px rgba($black, 0.35);
+        }
+    }
+    .site-menu {
+        &__btn {
+            margin: 0 0.5rem;
+        }
+    }
+}
